@@ -9,9 +9,7 @@ async function lunch(content){
     var leng = contentArr.length;
 
     var Translated_CONTENT = (String(await func.PAPAGO_translate(content, 'en'))).replace(/Moongi/gi, '');
-    console.log(`Translated_CONTENT : ${Translated_CONTENT}`);
     Tag_Arr = tagger.tagSentence(Translated_CONTENT);
-    console.log(Tag_Arr);
     leng = Tag_Arr.length;
     Day_ARR = [];
     chk_dtt1 = true;
