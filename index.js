@@ -3,7 +3,7 @@ var tagger = posTagger();
 var func = require('./function.js');
 const content = "지금 날짜가 5월 20일이니!";
 
-async function lunch(content){
+async function get(content){
     var DTE = new Date();
     var contentArr = content.split(" ");
     var leng = contentArr.length;
@@ -64,4 +64,4 @@ async function lunch(content){
     var Date_frmt = `${Year}/${Month_d}/${Detected_day}`;
     console.log(`Detected Date : ${Date_frmt}`);
 }
-lunch(content);
+get(content);
